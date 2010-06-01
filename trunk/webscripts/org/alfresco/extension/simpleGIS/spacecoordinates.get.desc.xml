@@ -1,0 +1,7 @@
+<webscript>
+  <shortname>Get Map Coordinates</shortname>
+  <description>Returns latitude and longitude of an address, city, state or zipcode</description>
+    <url>/map/coordinates/{store_type}/{store_id}/{id}</url>
+  <authentication>user</authentication>
+  <format default="html">argument</format>
+</webscript>

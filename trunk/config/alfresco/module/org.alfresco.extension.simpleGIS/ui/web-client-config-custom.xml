@@ -1,0 +1,42 @@
+<alfresco-config>
+	
+	<config evaluator="string-compare" condition="Action Wizards">
+		<aspects>
+			<aspect name="gis:mappable"/>
+			<aspect name="gis:mappableSpace"/>
+		</aspects>
+	</config>
+	
+	<config evaluator="aspect-name" condition="gis:mappable">
+	    <property-sheet>
+	        <show-property name="gis:address" read-only="false" />
+	        <show-property name="gis:city" read-only="false" />
+	        <show-property name="gis:state" read-only="false" />
+	    	<show-property name="gis:postalCode" read-only="false"/>
+	    </property-sheet>
+	</config>
+	
+	<config evaluator="aspect-name" condition="gis:mappableSpace">
+		<property-sheet>
+			<show-property name="gis:_city" read-only="false" />
+			<show-property name="gis:_state" read-only="false" />
+			<show-property name="gis:_postalCode" read-only="false"/>
+			<show-property name="gis:zoom" read-only="false"/>
+		</property-sheet>
+	</config>
+	
+	<config evaluator="string-compare" condition="Advanced Search">
+		<advanced-search>
+			<content-types>
+			</content-types>
+			<custom-properties>
+				<meta-data aspect="gis:mappable" property="gis:address" />
+				<meta-data aspect="gis:mappable" property="gis:city" />
+				<meta-data aspect="gis:mappable" property="gis:state" />
+				<meta-data aspect="gis:mappable" property="gis:postalCode" />
+			</custom-properties>
+		</advanced-search>
+	</config>
+	
+	
+</alfresco-config>

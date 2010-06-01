@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="gis:simpleGIS" xmlns="http://www.alfresco.org/model/dictionary/1.0">
+    
+    <description>simpleGIS</description>
+    <author>Jared Ottley</author>
+    <version>1.0</version>
+    
+
+    <imports>
+        <import uri="http://www.alfresco.org/model/dictionary/1.0" prefix="d" />
+    </imports>
+    
+    <namespaces>
+        <namespace uri="http://www.alfresco.com/model/content/1.0" prefix="gis" />
+    </namespaces>
+        
+    <aspects>
+        <aspect name="gis:defaults">
+            <title>defaults</title>
+            <properties>
+                <property name="gis:city">
+                    <type>d:text</type>
+                </property>
+                <property name="gis:state">
+                    <type>d:text</type>
+                </property>
+                <property name="gis:postalCode">
+                    <type>d:text</type>
+                    <mandatory>true</mandatory>
+                </property>
+                <property name="gis:zoom">
+                    <type>d:text</type>
+                    <default>8</default>
+                </property>
+            </properties>
+        </aspect>
+        
+        <!-- Content Map -->
+        <aspect name="gis:mappable">
+            <title>Mappable</title>
+            <properties>
+                <property name="gis:address">
+                	<type>d:text</type>
+                	<mandatory>true</mandatory>
+                </property>
+            </properties>
+            <mandatory-aspects>
+                <aspect>gis:defaults</aspect>
+            </mandatory-aspects>
+        </aspect>
+        
+        <!-- Space Map -->
+        <aspect name="gis:mappableSpace">
+            <title>Mappable Space</title>
+            <mandatory-aspects>
+                <aspect>gis:defaults</aspect>
+            </mandatory-aspects>
+        </aspect>	
+    </aspects>
+        
+</model>
