@@ -1,0 +1,1 @@
+<img src="http://maps.google.com/maps/api/staticmap?center=${center}&zoom=${zoom}&size=750x250&maptype=roadmap&sensor=false&key=${key}&markers=color:blue|${coordinates}" />

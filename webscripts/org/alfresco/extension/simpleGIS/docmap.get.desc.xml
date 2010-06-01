@@ -1,0 +1,7 @@
+<webscript>
+  <shortname>Node Map</shortname>
+  <description>Returns a static google map based on mappable aspect</description>
+  <url>/map/{store_type}/{store_id}/{id}</url>
+  <authentication>user</authentication>
+  <format default="html"/>
+</webscript>
