@@ -34,5 +34,5 @@ var callback =
 
 alert("${space.id}");
 
-var request = YAHOO.util.Connect.asyncRequest('GET', '/alfresco/service/map/coordinates/workspace/SpacesStore/${space.id}', callback); 
+var request = YAHOO.util.Connect.asyncRequest('GET', '/alfresco/wcservice/map/coordinates/workspace/SpacesStore/${space.id}', callback); 
 //]]></script>

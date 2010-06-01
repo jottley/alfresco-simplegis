@@ -28,6 +28,6 @@ var callback =
 	  argument: {}
 }
 
-var request = YAHOO.util.Connect.asyncRequest('GET', '/alfresco/service/map/workspace/SpacesStore/${document.id}', callback); 
+var request = YAHOO.util.Connect.asyncRequest('GET', '/alfresco/wcservice/map/workspace/SpacesStore/${document.id}', callback); 
 
 //]]></script>
