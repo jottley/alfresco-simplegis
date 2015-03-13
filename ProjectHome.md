@@ -1,0 +1,1 @@
+Implement a simple integration between Alfresco and Google Maps.  Takes an set of properties exposed via an aspect and show the location of content (via metadata) on a google map either in the details view, or space view.
